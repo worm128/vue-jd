@@ -2,10 +2,12 @@ const express = require('express');
 const mysql = require('mysql');
 const common = require('../libs/common');
 const db = mysql.createPool({
-    host: 'localhost',
+    host: '192.168.0.114',
+    port: '3306',
     user: 'root',
-    password: 'huangche201314',
-    database: 'myigou'
+    password: 'worm010304124',
+    database: 'myigou',
+    timeout: 1000000
 });
 module.exports = () => {
     const route = express.Router();
